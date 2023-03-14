@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "32AYV6DTYBFAMAqITqX2ZAwEFrmxK/M0XEwXFESgETf7TsL+kCnmIYU4cQx918rdOULO1DmJ4FssjMdYF9Drhw==",
+  "success": true,
+  "projectFilePath": "D:\\2year\\HK2\\WIPR\\Login\\Login\\Login.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\HP\\.nuget\\packages\\materialdesigncolors\\2.1.2\\materialdesigncolors.2.1.2.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\materialdesignthemes\\4.8.0\\materialdesignthemes.4.8.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512"
+  ],
+  "logs": []
+}

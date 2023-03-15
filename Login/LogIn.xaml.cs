@@ -53,5 +53,12 @@ namespace Login
             base.OnMouseLeftButtonDown(e);
             DragMove();
         }
+
+        private void btn_login_Click(object sender, RoutedEventArgs e)
+        {
+            Dashboard dashboard  = new Dashboard();
+            Close();
+            dashboard.Show();
+        }
     }
 }

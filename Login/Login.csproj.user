@@ -7,11 +7,17 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Dashboard.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="SplashScreen.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Dashboard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="LogIn.xaml">
       <SubType>Designer</SubType>
     </Page>

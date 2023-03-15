@@ -26,3 +26,5 @@ D:\2year\HK2\WIPR\Login\Login\obj\Debug\net6.0-windows\SplashScreen.g.cs
 D:\2year\HK2\WIPR\Login\Login\obj\Debug\net6.0-windows\SplashScreen.baml
 D:\2year\HK2\WIPR\Login\Login\obj\Debug\net6.0-windows\LogIn.g.cs
 D:\2year\HK2\WIPR\Login\Login\obj\Debug\net6.0-windows\LogIn.baml
+D:\2year\HK2\WIPR\Login\Login\obj\Debug\net6.0-windows\Dashboard.g.cs
+D:\2year\HK2\WIPR\Login\Login\obj\Debug\net6.0-windows\Dashboard.baml

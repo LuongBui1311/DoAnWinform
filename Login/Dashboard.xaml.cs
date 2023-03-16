@@ -28,5 +28,19 @@ namespace Login
             base.OnMouseLeftButtonDown(e);
             DragMove();
         }
+
+        private void btn_CongDan_Click(object sender, RoutedEventArgs e)
+        {
+            Search search = new Search();
+            Close();
+            search.Show();
+        }
+
+        private void btn_LogOut_Click(object sender, RoutedEventArgs e)
+        {
+            LogIn logIn = new LogIn();
+            Close();
+            logIn.Show();
+        }
     }
 }

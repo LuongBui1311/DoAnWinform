@@ -17,7 +17,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="190"/>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="250"/>
             </Grid.ColumnDefinitions>
             <materialDesign:ColorZone Grid.Column="0" Height="650" CornerRadius="15 0 0 15" Background="White">
                 <StackPanel Margin="15">
@@ -32,11 +32,11 @@
                             <TextBlock Text="Trang chủ"/>
                         </WrapPanel>
                     </Button>
-                    <Button Style="{StaticResource MaterialDesignFlatButton}" Foreground="{DynamicResource PrimaryHueLightForegroundBrush}" materialDesign:ButtonAssist.CornerRadius="6" Width="auto"
-                            Height="35" materialDesign:RippleAssist.Feedback="White" Margin="0 0 0 15">
+                    <Button x:Name="btn_CongDan" Style="{StaticResource MaterialDesignFlatButton}" Foreground="{DynamicResource PrimaryHueLightForegroundBrush}" materialDesign:ButtonAssist.CornerRadius="6" Width="auto"
+                            Height="35" materialDesign:RippleAssist.Feedback="White" Margin="0 0 0 15" Click="btn_CongDan_Click">
                         <WrapPanel Width="120">
-                            <materialDesign:PackIcon Kind="Lecture" VerticalAlignment="Center" Margin="0 0 20 0"/>
-                            <TextBlock Text="Tạo đơn"/>
+                            <materialDesign:PackIcon Kind="People" VerticalAlignment="Center" Margin="0 0 20 0"/>
+                            <TextBlock Text="Công dân"/>
                         </WrapPanel>
                     </Button>
                     <Button Style="{StaticResource MaterialDesignFlatButton}" Foreground="{DynamicResource PrimaryHueLightForegroundBrush}" materialDesign:ButtonAssist.CornerRadius="6" Width="auto"
@@ -221,17 +221,93 @@
                         </Grid>
                     </materialDesign:ColorZone>
                 </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="300"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <materialDesign:ColorZone Grid.Column="0" Mode="Custom" Background="White" Foreground="Black" CornerRadius="15" Padding="20">
+                        <StackPanel>
+                            <DockPanel>
+                                <TextBlock Text="Tra cứu gần đây" FontSize="12" FontWeight="Bold"/>
+                                <TextBlock Text="More" FontSize="11" FontWeight="SemiBold" Margin="135 0 0 0"/>
+                                <materialDesign:PackIcon Kind="ArrowRight" VerticalAlignment="Center" HorizontalAlignment="Right" DockPanel.Dock="Right"/>
+                            </DockPanel>
+                            <DockPanel Margin="0 30 0 0">
+                                <TextBlock Foreground="Gray" FontSize="11" FontWeight="SemiBold" HorizontalAlignment="Left"><Bold Foreground="Black"><Run Text="Đơn:"/></Bold><Run Text=" Tạm trú"/></TextBlock>
+                                <ProgressBar Value="25" Width="60" Height="4" BorderThickness="0" Foreground="LightCoral" Background="Gainsboro" Margin="65 0 0 0"/>
+                                <TextBlock Text="25%" FontSize="11" FontWeight="SemiBold" HorizontalAlignment="Right"/>
+                            </DockPanel>
+                            <Separator Background="WhiteSmoke" Margin="0 15 0 0"/>
+
+                            <DockPanel Margin="0 15 0 0">
+                                <TextBlock Foreground="Gray" FontSize="11" FontWeight="SemiBold" HorizontalAlignment="Left"><Bold Foreground="Black"><Run Text="Đơn:"/></Bold><Run Text=" Tạm vắng"/></TextBlock>
+                                <ProgressBar Value="25" Width="60" Height="4" BorderThickness="0" Foreground="DodgerBlue" Background="Gainsboro" Margin="76 0 0 0"/>
+                                <TextBlock Text="25%" FontSize="11" FontWeight="SemiBold" HorizontalAlignment="Right"/>
+                            </DockPanel>
+                            <Separator Background="WhiteSmoke" Margin="0 15 0 0"/>
+
+                            <DockPanel Margin="0 15 0 0">
+                                <TextBlock Foreground="Gray" FontSize="11" FontWeight="SemiBold" HorizontalAlignment="Left"><Bold Foreground="Black"><Run Text="Chứng nhận"/></Bold><Run Text=" Đăng kí kết hôn"/></TextBlock>
+                                <ProgressBar Value="44" Width="60" Height="4" BorderThickness="0" Foreground="DodgerBlue" Background="Gainsboro" Margin="67 0 0 0"/>
+                                <TextBlock Text="44%" FontSize="11" FontWeight="SemiBold" HorizontalAlignment="Right"/>
+                            </DockPanel>
+                            <Separator Background="WhiteSmoke" Margin="0 15 0 0"/>
+
+                            <DockPanel Margin="0 15 0 0">
+                                <TextBlock Foreground="Gray" FontSize="11" FontWeight="SemiBold" HorizontalAlignment="Left"><Bold Foreground="Black"><Run Text="Số liệu:"/></Bold><Run Text=" Thuế"/></TextBlock>
+                                <ProgressBar Value="40" Width="60" Height="4" BorderThickness="0" Foreground="MediumSeaGreen" Background="Gainsboro" Margin="72 0 0 0"/>
+                                <TextBlock Text="40%" FontSize="11" FontWeight="SemiBold" HorizontalAlignment="Right"/>
+                            </DockPanel>
+                            <Separator Background="WhiteSmoke" Margin="0 15 0 0"/>
+                        </StackPanel>
+                    </materialDesign:ColorZone>
+                    <materialDesign:ColorZone Grid.Column="1" Margin="15 35 0 0" Mode="Custom" Background="White" Foreground="Black" CornerRadius="15" Padding="20 20">
+                        <StackPanel>
+                            <DockPanel>
+                                <TextBlock FontSize="12" FontWeight="Bold" Text="Đánh giá"/>
+                                <materialDesign:PackIcon Kind="ArrowRight" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+                            </DockPanel>
+                            <DockPanel>
+                                <TextBlock HorizontalAlignment="Left" FontSize="11" FontWeight="SemiBold" Foreground="Gray"><Bold/><Run Text="-  Nhanh chóng:"/></TextBlock>
+                                <materialDesign:RatingBar IsReadOnly="True" Max="5" Value="4" Orientation="Horizontal" HorizontalAlignment="Right">
+                                    <materialDesign:RatingBar.ValueItemTemplate>
+                                        <DataTemplate DataType="sytem:Int32">
+                                            <Grid>
+                                                <materialDesign:PackIcon Kind="Star" Height="15" Width="15"/>
+                                            </Grid>
+                                        </DataTemplate>
+                                    </materialDesign:RatingBar.ValueItemTemplate>
+                                </materialDesign:RatingBar>
+                            </DockPanel>
+                            <DockPanel Margin="0 15 0 10">
+                                <TextBlock HorizontalAlignment="Left" FontSize="11" FontWeight="SemiBold" Foreground="Gray"><Bold/><Run Text=" - Dễ dàng:"/></TextBlock>
+                                <materialDesign:RatingBar IsReadOnly="True" Max="5" Value="4" Orientation="Horizontal" HorizontalAlignment="Right">
+                                    <materialDesign:RatingBar.ValueItemTemplate>
+                                        <DataTemplate DataType="SystemColors:Int32">
+                                            <Grid>
+                                                <materialDesign:PackIcon Kind="Star" Height="15" Width="15"/>
+                                            </Grid>
+                                        </DataTemplate>
+                                    </materialDesign:RatingBar.ValueItemTemplate>
+                                </materialDesign:RatingBar>
+                            </DockPanel>
+                            <TextBlock HorizontalAlignment="Left" FontSize="11" FontWeight="SemiBold" Foreground="DimGray"><Run Text="Bạn có thể sử dụng trang web để thực hiện"/><LineBreak/><Run Text="một số thủ tục đơn giản ngay tại nhà."/></TextBlock>
+                        </StackPanel>
+                    </materialDesign:ColorZone>
+                </Grid>
             </StackPanel>
             <materialDesign:ColorZone Grid.Column="2" Margin="30 0 0 0" CornerRadius="0 15 0 0" Height="650" Background="White" Foreground="Black">
                 <StackPanel Margin="0 12 5 0">
                     <DockPanel>
-                        <TextBlock Text="Hồ sơ của bạn" FontSize="12" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                        <Button Style="{StaticResource MaterialDesignIconButton}" materialDesign:RippleAssist.Feedback="LightPink" Foreground="LightCoral" materialDesign:ButtonAssist.CornerRadius="6" Height="40"
-                            Width="40" DockPanel.Dock="Right" HorizontalAlignment="Right">
+                        <TextBlock Text="Hồ sơ của bạn" FontSize="12" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10 0 0 0"/>
+                        <Button x:Name="btn_LogOut" Style="{StaticResource MaterialDesignIconButton}" materialDesign:RippleAssist.Feedback="LightPink" Foreground="LightCoral" materialDesign:ButtonAssist.CornerRadius="6" Height="40"
+                            Width="40" DockPanel.Dock="Right" HorizontalAlignment="Right" Click="btn_LogOut_Click">
                             <materialDesign:PackIcon Kind="LogoutVariant"/>
                         </Button>
                     </DockPanel>
-                    <Image RenderOptions.BitmapScalingMode="HighQuality" Source="D:\BIDV\Full\Full\22110194.jpg" Height="80" Width="80" HorizontalAlignment="Center" Margin="0 25 0 0"/>
+                    <Image RenderOptions.BitmapScalingMode="HighQuality" Source="C:\Users\HP\Pictures\Screenshots\Screenshot_20221028_025259.png" Stretch="UniformToFill"
+                           Height="100" Width="80" HorizontalAlignment="Center" Margin="0 25 0 0"/>
                     <TextBlock FontSize="12" FontWeight="Bold" Margin="0 15 0 7" TextAlignment="Center" Foreground="Black">Nguyen Van A</TextBlock>
                     <TextBlock Text="Nhan vien" FontSize="11" FontWeight="SemiBold" TextAlignment="Center" HorizontalAlignment="Center" Foreground="Gray"/>
 
@@ -244,7 +320,7 @@
 
                     </Button>
                     <DockPanel>
-                        <TextBlock Text="Tong quan" FontSize="12" FontWeight="Bold"/>
+                        <TextBlock Text="Tong quan" FontSize="12" FontWeight="Bold" Margin="10 0 0 0"/>
                     </DockPanel>
                     <materialDesign:ColorZone CornerRadius="15" Height="65" Mode="Custom" Background="AliceBlue" Margin="0 20 0 0" Foreground="DodgerBlue" Padding="20 10">
                         <Grid>

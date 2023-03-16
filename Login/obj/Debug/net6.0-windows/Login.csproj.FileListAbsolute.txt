@@ -28,3 +28,11 @@ D:\2year\HK2\WIPR\Login\Login\obj\Debug\net6.0-windows\LogIn.g.cs
 D:\2year\HK2\WIPR\Login\Login\obj\Debug\net6.0-windows\LogIn.baml
 D:\2year\HK2\WIPR\Login\Login\obj\Debug\net6.0-windows\Dashboard.g.cs
 D:\2year\HK2\WIPR\Login\Login\obj\Debug\net6.0-windows\Dashboard.baml
+D:\2year\HK2\WIPR\Login\Login\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+D:\2year\HK2\WIPR\Login\Login\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+D:\2year\HK2\WIPR\Login\Login\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+D:\2year\HK2\WIPR\Login\Login\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+D:\2year\HK2\WIPR\Login\Login\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\2year\HK2\WIPR\Login\Login\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\2year\HK2\WIPR\Login\Login\obj\Debug\net6.0-windows\Search.g.cs
+D:\2year\HK2\WIPR\Login\Login\obj\Debug\net6.0-windows\Search.baml

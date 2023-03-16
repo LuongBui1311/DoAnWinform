@@ -59,6 +59,7 @@ namespace Login
             Dashboard dashboard  = new Dashboard();
             Close();
             dashboard.Show();
+
         }
     }
 }

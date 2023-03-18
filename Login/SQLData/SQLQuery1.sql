@@ -5,7 +5,7 @@
 	CCCD char(12),
 	NgaySinh Date,
 	NoiSinh nchar(70),
-	HonNhan nchar
+	HonNhan nchar,
 	SDT char(10)
 )
 

@@ -8,7 +8,7 @@ namespace Login
 {
     public class Giaychungnhankethon
     {
-        private string hotenvo;
+                private string hotenvo;
         private string ngaysinhvo;
         private string dantocvo;
         private string quoctichvo;
@@ -22,7 +22,7 @@ namespace Login
         private string giaytotuythanchong;
         private string noidk;
         private DateTime ngaydk;
-
+        
         public string Hotenvo { get { return hotenvo; } }
         public string Ngaysinhvo { get { return ngaysinhvo; } }
         public string Dantocvo { get { return dantocvo; } }

@@ -1,19 +1,19 @@
 ﻿create table CongDan
 (
-	HoTen nchar(255),
+	HoTen nchar(50),
 	GioiTinh nchar(5),
 	CCCD char(12),
 	NgaySinh Date,
-	NoiSinh nchar(70),
-	HonNhan nchar(100),
-	QuocTich nchar(100),
-	DanToc nchar(100),
-	TonGiao nchar(100),
-	ThuongTru nchar(255),
-	QueQuan nchar(100),
-	DiaChi nchar(255),
+	NoiSinh nchar(20),
+	HonNhan nchar(30),
+	QuocTich nchar(20),
+	DanToc nchar(20),
+	TonGiao nchar(30),
+	ThuongTru nchar(20),
+	QueQuan nchar(20),
+	DiaChi nchar(20),
 	SDT char(10),
-	Email char(255)
+	Email char(30)
 )
 
 insert into CongDan values
@@ -28,5 +28,5 @@ insert into CongDan values
 (N'Lê Hữu C', N'Nam',	'096100102545',	'2000-01-31', N'Cà Mau', N'Chưa kết hôn', N'Việt Nam', N'Kinh', N'Thiên Chúa Giáo',	N'Hồ Chí Minh',	N'Cà Mau',	N'Hồ Chí Minh', '0356445874', 'lehuuc@gmail.com'),
 (N'Bùi Kim Y', N'Nữ',	'058305451003',	'2005-04-28', N'Ninh Thuận', N'Chưa kết hôn', N'Việt Nam', N'Kinh', N'Đạo Phật', N'Ninh Thuận',	N'Ninh Thuận',	N'Ninh Thuận',	'0367636601', 'buikimy@gmail.com')
 
-
 select *from CongDan
+

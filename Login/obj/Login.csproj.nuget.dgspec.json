@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ADMIN\\Source\\Repos\\DoAnWinform\\Login\\Login.csproj": {}
+    "D:\\N2.2\\Lập trình trên Windows\\DoAnWinform\\Login\\Login.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ADMIN\\Source\\Repos\\DoAnWinform\\Login\\Login.csproj": {
+    "D:\\N2.2\\Lập trình trên Windows\\DoAnWinform\\Login\\Login.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\Source\\Repos\\DoAnWinform\\Login\\Login.csproj",
+        "projectUniqueName": "D:\\N2.2\\Lập trình trên Windows\\DoAnWinform\\Login\\Login.csproj",
         "projectName": "Login",
-        "projectPath": "C:\\Users\\ADMIN\\Source\\Repos\\DoAnWinform\\Login\\Login.csproj",
+        "projectPath": "D:\\N2.2\\Lập trình trên Windows\\DoAnWinform\\Login\\Login.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\Source\\Repos\\DoAnWinform\\Login\\obj\\",
+        "outputPath": "D:\\N2.2\\Lập trình trên Windows\\DoAnWinform\\Login\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",

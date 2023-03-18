@@ -78,11 +78,11 @@ namespace Login
         //    {
         //        conn.Open();
         //        string sqlStr = string.Format("SELECT *FROM CongDan");
-               
+
         //        SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
         //        DataTable dtCongDan = new DataTable();
         //        adapter.Fill(dtCongDan);
-                
+
         //        dtg_Search.ItemsSource = dtCongDan.DefaultView; /// gvHsinh = name cua data gridview
         //    }
         //    catch (Exception exc)
@@ -107,6 +107,29 @@ namespace Login
                 adapter.Fill(dtThue);
 
                 dtg_Thue.ItemsSource = dtThue.DefaultView; 
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void dtg_Tamtru_Loaded(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                conn.Open();
+                string sqlStr = string.Format("SELECT *FROM Tamtru");
+
+                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
+                DataTable dtTamtru = new DataTable();
+                adapter.Fill(dtTamtru);
+
+                dtg_Tamtru.ItemsSource = dtTamtru.DefaultView;
             }
             catch (Exception exc)
             {

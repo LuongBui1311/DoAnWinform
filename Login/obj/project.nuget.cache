@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WrAfuVFSpgjPqNrtCTneUk9J5OA50GVGjUhTyksVxU7ZJXX65vl5NWOpNhG5ypwmqI2zp+qSY2jWzJmWs2e+mA==",
+  "dgSpecHash": "WkecctCaWQ9xie0JNpzJOOEyh+7lSAoPEFBIMLez1HCLhOl9OoQIOID/gnVhqAyXD7kwpLb1yjq83+9FE/DN9Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ADMIN\\Source\\Repos\\DoAnWinform\\Login\\Login.csproj",
+  "projectFilePath": "D:\\N2.2\\Lập trình trên Windows\\DoAnWinform\\Login\\Login.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\materialdesigncolors\\2.1.2\\materialdesigncolors.2.1.2.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\materialdesignthemes\\4.8.0\\materialdesignthemes.4.8.0.nupkg.sha512",

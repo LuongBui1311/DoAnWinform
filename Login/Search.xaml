@@ -167,9 +167,20 @@
                         <Grid>
                             <DataGrid x:Name="dtg_Cnkh" Loaded="dtg_Cnkh_Loaded" AutoGenerateColumns="False" CanUserAddRows="False">
                                 <DataGrid.Columns>
-                                    <DataGridTextColumn Binding="{Binding Lydo}" Width="*" Header="Lý do"/>
-                                    <DataGridTextColumn Binding="{Binding Lydo}" Width="*" Header="Lý do"/>
-
+                                    <DataGridTextColumn Binding="{Binding Hotenvo}" Width="*" Header="Họ tên vợ"/>
+                                    <DataGridTextColumn Binding="{Binding Ngaysinhvo}" Width="*" Header="Ngày sinh vợ"/>
+                                    <DataGridTextColumn Binding="{Binding Dantocvo}" Width="*" Header="Dân tộc vợ"/>
+                                    <DataGridTextColumn Binding="{Binding Quoctichvo}" Width="*" Header="Quốc tịch vợ"/>
+                                    <DataGridTextColumn Binding="{Binding Noicutruvo}" Width="*" Header="Nơi cư trú vợ"/>
+                                    <DataGridTextColumn Binding="{Binding Giaytotuythanvo}" Width="*" Header="Giấy tờ tùy thân vợ"/>
+                                    <DataGridTextColumn Binding="{Binding Hotenchong}" Width="*" Header="Họ tên chồng"/>
+                                    <DataGridTextColumn Binding="{Binding Ngaysinhchong}" Width="*" Header="Ngày sinh chồng"/>
+                                    <DataGridTextColumn Binding="{Binding Dantocchong}" Width="*" Header="Dân tộc chồng"/>
+                                    <DataGridTextColumn Binding="{Binding Quoctichchong}" Width="*" Header="Quốc tịch chồng"/>
+                                    <DataGridTextColumn Binding="{Binding Noicutruchong}" Width="*" Header="Nơi cư trú chồng"/>
+                                    <DataGridTextColumn Binding="{Binding Giaytotuythanchong}" Width="*" Header="Giấy tờ tùy thân chồng"/>
+                                    <DataGridTextColumn Binding="{Binding Noidk}" Width="*" Header="Nơi đăng kí"/>
+                                    <DataGridTextColumn Binding="{Binding Ngaydk}" Width="*" Header="Ngày đăng kí"/>
                                 </DataGrid.Columns>
                             </DataGrid>
                         </Grid>

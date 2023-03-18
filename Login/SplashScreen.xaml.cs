@@ -38,7 +38,7 @@ namespace Login
         private void Worker_ProgressChanged(object? sender, ProgressChangedEventArgs e)
         {
             progressBar.Value= e.ProgressPercentage;
-            if (progressBar.Value == 100)
+            if (progressBar.Value == 50)
             {
                 LogIn logIn = new LogIn();
                 Close();
@@ -48,10 +48,10 @@ namespace Login
 
         private void Worker_DoWork(object? sender, DoWorkEventArgs e)
         {
-            for (int i = 0; i <= 100; i++)
+            for (int i = 0; i <= 50; i++)
             {
                 (sender as BackgroundWorker).ReportProgress(i);
-                Thread.Sleep(80);
+                Thread.Sleep(40);
             }
         }
     }

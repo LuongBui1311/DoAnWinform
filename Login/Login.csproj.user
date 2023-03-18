@@ -16,6 +16,15 @@
     <Compile Update="SplashScreen.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="wDonTamTru.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="wDonTamVang.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="wGiayDangKiKetHon.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Dashboard.xaml">
@@ -28,6 +37,15 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="SplashScreen.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="wDonTamTru.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="wDonTamVang.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="wGiayDangKiKetHon.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

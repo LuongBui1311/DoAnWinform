@@ -101,51 +101,11 @@
                 <TabControl Grid.Row="2">
                     <TabItem Header="Thông tin công dân" Width="auto" Height="45">
                         <Grid Margin="0 5 0 5">
-                            <DataGrid Style="{DynamicResource MaterialDesignDataGrid}" CellStyle="{DynamicResource DataGridCellStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}">
+                            <DataGrid x:Name="dtg_Search" Loaded="DataGrid_Loaded" AutoGenerateColumns="False" CanUserAddRows="False">
                                 <DataGrid.Columns>
-                                    <DataGridCheckBoxColumn CanUserResize="False" Width="auto" ElementStyle="{StaticResource CheckBoxStyle1}">
-                                        <DataGridCheckBoxColumn.HeaderTemplate>
-                                            <DataTemplate>
-                                                <CheckBox Style="{StaticResource CheckBoxStyle1}"/>
-                                            </DataTemplate>
-                                        </DataGridCheckBoxColumn.HeaderTemplate>
-                                    </DataGridCheckBoxColumn>
-
-                                    <DataGridTextColumn Header="#" IsReadOnly="True" CanUserResize="False" Width="auto" Binding="{Binding Number}"/>
-
-                                    <DataGridTemplateColumn Header="Member" IsReadOnly="True" Width="auto">
-                                        <DataGridTemplateColumn.CellTemplate>
-                                            <DataTemplate>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Border Width="25" Height="25" CornerRadius="50" Margin="0 0 10 0" Background="{Binding BgColor}">
-                                                        <TextBlock Text="{Binding Character}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Margin="0 0 0 1"/>
-                                                    </Border>
-
-                                                    <TextBlock Text="{Binding Name}" VerticalAlignment="Center"/>
-                                                </StackPanel>
-                                            </DataTemplate>
-                                        </DataGridTemplateColumn.CellTemplate>
-                                    </DataGridTemplateColumn>
-
-                                    <DataGridTextColumn Header="Position" IsReadOnly="True" Width="auto" Binding="{Binding Position}"/>
-                                    <DataGridTextColumn Header="Email Address" IsReadOnly="True" Width="auto" Binding="{Binding Email}"/>
-                                    <DataGridTextColumn Header="Phone Number" IsReadOnly="True" Width="auto" Binding="{Binding Phone}"/>
-
-                                    <DataGridTemplateColumn Header="Operations" IsReadOnly="True" Width="auto">
-                                        <DataGridTemplateColumn.CellTemplate>
-                                            <DataTemplate>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Button Style="{StaticResource gridEditButton}">
-                                                        <materialDesign:PackIcon Kind="PencilOutline" Width="12" Height="12" VerticalAlignment="Center"/>
-                                                    </Button>
-                                                    <Button Style="{StaticResource gridRemoveButton}" Margin="5 0 0 0">
-                                                        <materialDesign:PackIcon Kind="PencilOutline" Width="12" Height="12" VerticalAlignment="Center"/>
-                                                    </Button>
-                                                </StackPanel>
-                                            </DataTemplate>
-                                        </DataGridTemplateColumn.CellTemplate>
-                                    </DataGridTemplateColumn>
-
+                                    <DataGridTextColumn Binding="{Binding Ten}" Width="*" Header="Họ và tên"/>
+                                    <DataGridTextColumn Binding="{Binding CCCD}" Width="*" Header="CCCD"/>
+                                    <DataGridTextColumn Binding="{Binding SDT}" Width="*" Header="Số điện thoại"/>
                                 </DataGrid.Columns>
                             </DataGrid>
                         </Grid>

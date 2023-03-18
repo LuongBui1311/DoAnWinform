@@ -36,3 +36,10 @@ D:\2year\HK2\WIPR\Login\Login\bin\Debug\net6.0-windows\runtimes\unix\lib\netcore
 D:\2year\HK2\WIPR\Login\Login\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\2year\HK2\WIPR\Login\Login\obj\Debug\net6.0-windows\Search.g.cs
 D:\2year\HK2\WIPR\Login\Login\obj\Debug\net6.0-windows\Search.baml
+D:\2year\HK2\WIPR\Login\Login\bin\Debug\net6.0-windows\Login.dll.config
+D:\2year\HK2\WIPR\Login\Login\obj\Debug\net6.0-windows\wDonTamTru.g.cs
+D:\2year\HK2\WIPR\Login\Login\obj\Debug\net6.0-windows\wDonTamVang.g.cs
+D:\2year\HK2\WIPR\Login\Login\obj\Debug\net6.0-windows\wGiayDangKiKetHon.g.cs
+D:\2year\HK2\WIPR\Login\Login\obj\Debug\net6.0-windows\wDonTamTru.baml
+D:\2year\HK2\WIPR\Login\Login\obj\Debug\net6.0-windows\wDonTamVang.baml
+D:\2year\HK2\WIPR\Login\Login\obj\Debug\net6.0-windows\wGiayDangKiKetHon.baml

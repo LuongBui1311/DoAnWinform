@@ -72,18 +72,19 @@ namespace Login
             logIn.Show();
         }
 
-        private void DataGrid_Loaded(object sender, RoutedEventArgs e)
+
+        private void dtg_Thongtin_Loaded(object sender, RoutedEventArgs e)
         {
             try
             {
                 conn.Open();
                 string sqlStr = string.Format("SELECT *FROM CongDan");
-               
+
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
                 DataTable dtCongDan = new DataTable();
                 adapter.Fill(dtCongDan);
-                
-                dtg_Search.ItemsSource = dtCongDan.DefaultView; /// gvHsinh = name cua data gridview
+
+                dtg_Thongtin.ItemsSource = dtCongDan.DefaultView;
             }
             catch (Exception exc)
             {

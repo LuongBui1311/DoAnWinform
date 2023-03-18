@@ -101,13 +101,24 @@
                 <TabControl Grid.Row="2">
                     <TabItem Header="Thông tin công dân" Width="auto" Height="45">
                         <Grid Margin="0 5 0 5">
-                            <!--<DataGrid x:Name="dtg_Search" Loaded="DataGrid_Loaded" AutoGenerateColumns="False" CanUserAddRows="False">
+                            <DataGrid x:Name="dtg_Search" Loaded="DataGrid_Loaded" AutoGenerateColumns="False" CanUserAddRows="False">
                                 <DataGrid.Columns>
-                                    <DataGridTextColumn Binding="{Binding Ten}" Width="*" Header="Họ và tên"/>
-                                    <DataGridTextColumn Binding="{Binding CCCD}" Width="*" Header="CCCD"/>
-                                    <DataGridTextColumn Binding="{Binding SDT}" Width="*" Header="Số điện thoại"/>
+                                    <DataGridTextColumn Binding="{Binding HoTen}" Width="auto" Header="Họ và tên"/>
+                                    <DataGridTextColumn Binding="{Binding GioiTinh}" Width="auto" Header="Giới tính"/>
+                                    <DataGridTextColumn Binding="{Binding CCCD}" Width="auto" Header="CCCD"/>
+                                    <DataGridTextColumn Binding="{Binding NgaySinh}" Width="auto" Header="Ngày sinh"/>
+                                    <DataGridTextColumn Binding="{Binding NoiSinh}" Width="auto" Header="Nơi sinh"/>
+                                    <DataGridTextColumn Binding="{Binding HonNhan}" Width="auto" Header="Tình trang hôn nhân"/>
+                                    <DataGridTextColumn Binding="{Binding QuocTich}" Width="auto" Header="Quốc tịch"/>
+                                    <DataGridTextColumn Binding="{Binding DanToc}" Width="auto" Header="Dân tộc"/>
+                                    <DataGridTextColumn Binding="{Binding TonGiao}" Width="auto" Header="Tôn giáo"/>
+                                    <DataGridTextColumn Binding="{Binding ThuongTru}" Width="auto" Header="Thường trú"/>
+                                    <DataGridTextColumn Binding="{Binding QueQuan}" Width="auto" Header="Quê quán"/>
+                                    <DataGridTextColumn Binding="{Binding DiaChi}" Width="auto" Header="Nơi ở hiện tại"/>
+                                    <DataGridTextColumn Binding="{Binding SDT}" Width="auto" Header="Số điện thoại"/>
+                                    <DataGridTextColumn Binding="{Binding Email}" Width="auto" Header="Email"/>
                                 </DataGrid.Columns>
-                            </DataGrid>-->
+                            </DataGrid>
                         </Grid>
                     </TabItem>
                     <TabItem Header="Thuế" Width="auto" Height="45">

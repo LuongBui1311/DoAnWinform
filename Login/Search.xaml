@@ -101,17 +101,27 @@
                 <TabControl Grid.Row="2">
                     <TabItem Header="Thông tin công dân" Width="auto" Height="45">
                         <Grid Margin="0 5 0 5">
-                            <DataGrid x:Name="dtg_Search" Loaded="DataGrid_Loaded" AutoGenerateColumns="False" CanUserAddRows="False">
+                            <!--<DataGrid x:Name="dtg_Search" Loaded="DataGrid_Loaded" AutoGenerateColumns="False" CanUserAddRows="False">
                                 <DataGrid.Columns>
                                     <DataGridTextColumn Binding="{Binding Ten}" Width="*" Header="Họ và tên"/>
                                     <DataGridTextColumn Binding="{Binding CCCD}" Width="*" Header="CCCD"/>
                                     <DataGridTextColumn Binding="{Binding SDT}" Width="*" Header="Số điện thoại"/>
                                 </DataGrid.Columns>
-                            </DataGrid>
+                            </DataGrid>-->
                         </Grid>
                     </TabItem>
                     <TabItem Header="Thuế" Width="auto" Height="45">
-                        
+                        <Grid>
+                            <DataGrid x:Name="dtg_Thue" Loaded="dtg_Thue_Loaded" AutoGenerateColumns="False" CanUserAddRows="False">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Binding="{Binding Masothue}" Width="*" Header="Mã số thuế"/>
+                                    <DataGridTextColumn Binding="{Binding Tennguoinopthue}" Width="*" Header="Tên người nộp thuế"/>
+                                    <DataGridTextColumn Binding="{Binding Coquanthue}" Width="*" Header="Cơ quan thuế"/>
+                                    <DataGridTextColumn Binding="{Binding SoCMT_CCCD}" Width="*" Header="Số CMT/CCCD"/>
+                                    <DataGridTextColumn Binding="{Binding Ngaythaydoithongtingannhat}" Width="*" Header="Ngày thay đổi thông tin gần nhất"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Grid>
                     </TabItem>
                     <TabItem Header="Hộ khẩu" Width="auto" Height="45">
                         

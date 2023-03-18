@@ -72,18 +72,41 @@ namespace Login
             logIn.Show();
         }
 
-        private void DataGrid_Loaded(object sender, RoutedEventArgs e)
+        //private void DataGrid_Loaded(object sender, RoutedEventArgs e)
+        //{
+        //    try
+        //    {
+        //        conn.Open();
+        //        string sqlStr = string.Format("SELECT *FROM CongDan");
+               
+        //        SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
+        //        DataTable dtCongDan = new DataTable();
+        //        adapter.Fill(dtCongDan);
+                
+        //        dtg_Search.ItemsSource = dtCongDan.DefaultView; /// gvHsinh = name cua data gridview
+        //    }
+        //    catch (Exception exc)
+        //    {
+        //        MessageBox.Show(exc.Message);
+        //    }
+        //    finally
+        //    {
+        //        conn.Close();
+        //    }
+        //}
+
+        private void dtg_Thue_Loaded(object sender, RoutedEventArgs e)
         {
             try
             {
                 conn.Open();
-                string sqlStr = string.Format("SELECT *FROM CongDan");
-               
+                string sqlStr = string.Format("SELECT *FROM Thue");
+
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
-                DataTable dtCongDan = new DataTable();
-                adapter.Fill(dtCongDan);
-                
-                dtg_Search.ItemsSource = dtCongDan.DefaultView; /// gvHsinh = name cua data gridview
+                DataTable dtThue = new DataTable();
+                adapter.Fill(dtThue);
+
+                dtg_Thue.ItemsSource = dtThue.DefaultView; 
             }
             catch (Exception exc)
             {

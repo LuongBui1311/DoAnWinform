@@ -34,7 +34,7 @@ namespace Login
             logIn.Show();
         }
 
-        private void DataGrid_Loaded(object sender, RoutedEventArgs e)
+        private void dtg_ThongTin_Loaded(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -45,7 +45,7 @@ namespace Login
                 DataTable dtCongDan = new DataTable();
                 adapter.Fill(dtCongDan);
 
-                dtg_Search.ItemsSource = dtCongDan.DefaultView; /// gvHsinh = name cua data gridview
+                dtg_ThongTin.ItemsSource = dtCongDan.DefaultView; /// gvHsinh = name cua data gridview
             }
             catch (Exception exc)
             {
@@ -147,11 +147,6 @@ namespace Login
             {
                 conn.Close();
             }
-        }
-
-        private void dtg_ThongTin_Loaded()
-        {
-
         }
     }
 }

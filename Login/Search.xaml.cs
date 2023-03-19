@@ -148,5 +148,10 @@ namespace Login
                 conn.Close();
             }
         }
+
+        private void dtg_ThongTin_Loaded()
+        {
+
+        }
     }
 }

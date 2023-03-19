@@ -11,7 +11,7 @@
         "projectName": "Login",
         "projectPath": "C:\\Users\\HP\\source\\repos\\DoAnWinform\\Login\\Login.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\source\\repos\\DoAnWinform\\Login\\obj\\",
+        "outputPath": "C:\\Users\\HP\\Source\\Repos\\DoAnWinform\\Login\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",

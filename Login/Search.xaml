@@ -82,6 +82,7 @@
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
                 <DockPanel Grid.Row="0" Margin="0 12 5 0">
                     <TextBox HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15" FontWeight="Bold" materialDesign:HintAssist.Hint="Tìm Kiếm"/>
@@ -108,11 +109,7 @@
                     </TabControl.Template>
                     <TabItem Header="Thông tin công dân" Width="auto" Height="45">
                         <Grid Margin="0 5 0 5">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="auto"/>
-                            </Grid.RowDefinitions>
-                            <DataGrid Grid.Row="0" x:Name="dtg_ThongTin" AutoGenerateColumns="False" CanUserAddRows="False" CanUserReorderColumns="False" Loaded="dtg_ThongTin_Loaded">
+                            <DataGrid x:Name="dtg_ThongTin" AutoGenerateColumns="False" CanUserAddRows="False" CanUserReorderColumns="False" Loaded="dtg_ThongTin_Loaded" SelectedCellsChanged="dtg_ThongTin_SelectedCellsChanged">
                                 <DataGrid.Columns>
                                     <DataGridTextColumn Binding="{Binding HoTen}" Width="auto" Header="Họ và tên"/>
                                     <DataGridTextColumn Binding="{Binding GioiTinh}" Width="auto" Header="Giới tính"/>
@@ -130,38 +127,11 @@
                                     <DataGridTextColumn Binding="{Binding Email}" Width="auto" Header="Email"/>
                                 </DataGrid.Columns>
                             </DataGrid>
-                            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left">
-                                <Button Style="{StaticResource MaterialDesignFlatAccentButton}" Grid.Row="1" materialDesign:ButtonAssist.CornerRadius="7" materialDesign:RippleAssist.Feedback="Salmon"
-                                    Foreground="{DynamicResource PrimaryHueDarkBrush}" Width="100" Height="35" HorizontalAlignment="Right" Margin="0 10 20 0" FontSize="13">
-                                    <StackPanel Orientation="Horizontal">
-                                        <materialDesign:PackIcon Kind="Plus" VerticalAlignment="Center" Width="13" Height="13" Margin="0 1 8 0"/>
-                                        <TextBlock Text="Thêm"/>
-                                    </StackPanel>
-                                </Button>
-                                <Button Style="{StaticResource MaterialDesignFlatAccentButton}" Grid.Row="1" materialDesign:ButtonAssist.CornerRadius="7" materialDesign:RippleAssist.Feedback="Salmon"
-                                    Foreground="{DynamicResource PrimaryHueDarkBrush}" Width="100" Height="35" HorizontalAlignment="Right" Margin="0 10 20 0" FontSize="13">
-                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                        <materialDesign:PackIcon Kind="Delete" VerticalAlignment="Center" Margin="0 0 5 0"/>
-                                        <TextBlock Text="Xóa" VerticalAlignment="Center" FontSize="13" FontWeight="SemiBold"/>
-                                    </StackPanel>
-                                </Button>
-                                <Button Style="{StaticResource MaterialDesignFlatAccentButton}" Grid.Row="1" materialDesign:ButtonAssist.CornerRadius="7" materialDesign:RippleAssist.Feedback="Salmon"
-                                    Foreground="{DynamicResource PrimaryHueDarkBrush}" Width="100" Height="35" HorizontalAlignment="Right" Margin="0 10 20 0" FontSize="13">
-                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                        <materialDesign:PackIcon Kind="AutoFix" VerticalAlignment="Center" Margin="0 0 5 0"/>
-                                        <TextBlock Text="Sửa" VerticalAlignment="Center" FontSize="13" FontWeight="SemiBold"/>
-                                    </StackPanel>
-                                </Button>
-                            </StackPanel>
                         </Grid>
                     </TabItem>
                     <TabItem Header="Thuế" Width="auto" Height="45">
                         <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="auto"/>
-                            </Grid.RowDefinitions>
-                            <DataGrid Grid.Row="0" x:Name="dtg_Thue" Loaded="dtg_Thue_Loaded" AutoGenerateColumns="False" CanUserAddRows="False" CanUserReorderColumns="False">
+                            <DataGrid x:Name="dtg_Thue" Loaded="dtg_Thue_Loaded" AutoGenerateColumns="False" CanUserAddRows="False" CanUserReorderColumns="False">
                                 <DataGrid.Columns>
                                     <DataGridTextColumn Binding="{Binding Masothue}" Width="*" Header="Mã số thuế"/>
                                     <DataGridTextColumn Binding="{Binding Tennguoinopthue}" Width="*" Header="Tên người nộp thuế"/>
@@ -170,38 +140,11 @@
                                     <DataGridTextColumn Binding="{Binding Ngaythaydoithongtingannhat}" Width="*" Header="Ngày thay đổi thông tin gần nhất"/>
                                 </DataGrid.Columns>
                             </DataGrid>
-                            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left">
-                                <Button Style="{StaticResource MaterialDesignFlatAccentButton}" Grid.Row="1" materialDesign:ButtonAssist.CornerRadius="7" materialDesign:RippleAssist.Feedback="Salmon"
-                                    Foreground="{DynamicResource PrimaryHueDarkBrush}" Width="100" Height="35" HorizontalAlignment="Right" Margin="0 10 20 0" FontSize="13">
-                                    <StackPanel Orientation="Horizontal">
-                                        <materialDesign:PackIcon Kind="Plus" VerticalAlignment="Center" Width="13" Height="13" Margin="0 1 8 0"/>
-                                        <TextBlock Text="Thêm"/>
-                                    </StackPanel>
-                                </Button>
-                                <Button Style="{StaticResource MaterialDesignFlatAccentButton}" Grid.Row="1" materialDesign:ButtonAssist.CornerRadius="7" materialDesign:RippleAssist.Feedback="Salmon"
-                                    Foreground="{DynamicResource PrimaryHueDarkBrush}" Width="100" Height="35" HorizontalAlignment="Right" Margin="0 10 20 0" FontSize="13">
-                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                        <materialDesign:PackIcon Kind="Delete" VerticalAlignment="Center" Margin="0 0 5 0"/>
-                                        <TextBlock Text="Xóa" VerticalAlignment="Center" FontSize="13" FontWeight="SemiBold"/>
-                                    </StackPanel>
-                                </Button>
-                                <Button Style="{StaticResource MaterialDesignFlatAccentButton}" Grid.Row="1" materialDesign:ButtonAssist.CornerRadius="7" materialDesign:RippleAssist.Feedback="Salmon"
-                                    Foreground="{DynamicResource PrimaryHueDarkBrush}" Width="100" Height="35" HorizontalAlignment="Right" Margin="0 10 20 0" FontSize="13">
-                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                        <materialDesign:PackIcon Kind="AutoFix" VerticalAlignment="Center" Margin="0 0 5 0"/>
-                                        <TextBlock Text="Sửa" VerticalAlignment="Center" FontSize="13" FontWeight="SemiBold"/>
-                                    </StackPanel>
-                                </Button>
-                            </StackPanel>
                         </Grid>
                     </TabItem>
                     <TabItem Header="Tạm trú" Width="auto" Height="45">
                         <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="auto"/>
-                            </Grid.RowDefinitions>
-                            <DataGrid Grid.Row="0" x:Name="dtg_Tamtru" Loaded="dtg_Tamtru_Loaded" AutoGenerateColumns="False" CanUserAddRows="False" CanUserReorderColumns="False">
+                            <DataGrid x:Name="dtg_Tamtru" Loaded="dtg_Tamtru_Loaded" AutoGenerateColumns="False" CanUserAddRows="False" CanUserReorderColumns="False">
                                 <DataGrid.Columns>
                                     <DataGridTextColumn Binding="{Binding Ngaydk}" Width="auto" Header="Ngày đăng kí"/>
                                     <DataGridTextColumn Binding="{Binding Noidk}" Width="auto" Header="Nơi đăng kí"/>
@@ -217,38 +160,11 @@
                                     <DataGridTextColumn Binding="{Binding Lydo}" Width="auto" Header="Lý do"/>
                                 </DataGrid.Columns>
                             </DataGrid>
-                            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left">
-                                <Button Style="{StaticResource MaterialDesignFlatAccentButton}" Grid.Row="1" materialDesign:ButtonAssist.CornerRadius="7" materialDesign:RippleAssist.Feedback="Salmon"
-                                    Foreground="{DynamicResource PrimaryHueDarkBrush}" Width="100" Height="35" HorizontalAlignment="Right" Margin="0 10 20 0" FontSize="13">
-                                    <StackPanel Orientation="Horizontal">
-                                        <materialDesign:PackIcon Kind="Plus" VerticalAlignment="Center" Width="13" Height="13" Margin="0 1 8 0"/>
-                                        <TextBlock Text="Thêm"/>
-                                    </StackPanel>
-                                </Button>
-                                <Button Style="{StaticResource MaterialDesignFlatAccentButton}" Grid.Row="1" materialDesign:ButtonAssist.CornerRadius="7" materialDesign:RippleAssist.Feedback="Salmon"
-                                    Foreground="{DynamicResource PrimaryHueDarkBrush}" Width="100" Height="35" HorizontalAlignment="Right" Margin="0 10 20 0" FontSize="13">
-                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                        <materialDesign:PackIcon Kind="Delete" VerticalAlignment="Center" Margin="0 0 5 0"/>
-                                        <TextBlock Text="Xóa" VerticalAlignment="Center" FontSize="13" FontWeight="SemiBold"/>
-                                    </StackPanel>
-                                </Button>
-                                <Button Style="{StaticResource MaterialDesignFlatAccentButton}" Grid.Row="1" materialDesign:ButtonAssist.CornerRadius="7" materialDesign:RippleAssist.Feedback="Salmon"
-                                    Foreground="{DynamicResource PrimaryHueDarkBrush}" Width="100" Height="35" HorizontalAlignment="Right" Margin="0 10 20 0" FontSize="13">
-                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                        <materialDesign:PackIcon Kind="AutoFix" VerticalAlignment="Center" Margin="0 0 5 0"/>
-                                        <TextBlock Text="Sửa" VerticalAlignment="Center" FontSize="13" FontWeight="SemiBold"/>
-                                    </StackPanel>
-                                </Button>
-                            </StackPanel>
                         </Grid>
                     </TabItem>
                     <TabItem Header="Tạm vắng" Width="auto" Height="45">
                         <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="auto"/>
-                            </Grid.RowDefinitions>
-                            <DataGrid Grid.Row="0" x:Name="dtg_Tamvang" AutoGenerateColumns="False" CanUserAddRows="False" Loaded="dtg_Tamvang_Loaded" CanUserReorderColumns="False">
+                            <DataGrid x:Name="dtg_Tamvang" AutoGenerateColumns="False" CanUserAddRows="False" Loaded="dtg_Tamvang_Loaded" CanUserReorderColumns="False">
                                 <DataGrid.Columns>
                                     <DataGridTextColumn Binding="{Binding Ncdi}" Width="auto" Header="Nơi chuyển đi"/>
                                     <DataGridTextColumn Binding="{Binding Ncden}" Width="auto" Header="Nơi chuyển đến"/>
@@ -264,38 +180,11 @@
                                     <DataGridTextColumn Binding="{Binding Lydo}" Width="auto" Header="Lý do"/>
                                 </DataGrid.Columns>
                             </DataGrid>
-                            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left">
-                                <Button Style="{StaticResource MaterialDesignFlatAccentButton}" Grid.Row="1" materialDesign:ButtonAssist.CornerRadius="7" materialDesign:RippleAssist.Feedback="Salmon"
-                                    Foreground="{DynamicResource PrimaryHueDarkBrush}" Width="100" Height="35" HorizontalAlignment="Right" Margin="0 10 20 0" FontSize="13">
-                                    <StackPanel Orientation="Horizontal">
-                                        <materialDesign:PackIcon Kind="Plus" VerticalAlignment="Center" Width="13" Height="13" Margin="0 1 8 0"/>
-                                        <TextBlock Text="Thêm"/>
-                                    </StackPanel>
-                                </Button>
-                                <Button Style="{StaticResource MaterialDesignFlatAccentButton}" Grid.Row="1" materialDesign:ButtonAssist.CornerRadius="7" materialDesign:RippleAssist.Feedback="Salmon"
-                                    Foreground="{DynamicResource PrimaryHueDarkBrush}" Width="100" Height="35" HorizontalAlignment="Right" Margin="0 10 20 0" FontSize="13">
-                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                        <materialDesign:PackIcon Kind="Delete" VerticalAlignment="Center" Margin="0 0 5 0"/>
-                                        <TextBlock Text="Xóa" VerticalAlignment="Center" FontSize="13" FontWeight="SemiBold"/>
-                                    </StackPanel>
-                                </Button>
-                                <Button Style="{StaticResource MaterialDesignFlatAccentButton}" Grid.Row="1" materialDesign:ButtonAssist.CornerRadius="7" materialDesign:RippleAssist.Feedback="Salmon"
-                                    Foreground="{DynamicResource PrimaryHueDarkBrush}" Width="100" Height="35" HorizontalAlignment="Right" Margin="0 10 20 0" FontSize="13">
-                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                        <materialDesign:PackIcon Kind="AutoFix" VerticalAlignment="Center" Margin="0 0 5 0"/>
-                                        <TextBlock Text="Sửa" VerticalAlignment="Center" FontSize="13" FontWeight="SemiBold"/>
-                                    </StackPanel>
-                                </Button>
-                            </StackPanel>
                         </Grid>
                     </TabItem>
                     <TabItem Header="Giấy chứng nhận kết hôn" Width="auto" Height="45">
                         <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="auto"/>
-                            </Grid.RowDefinitions>
-                            <DataGrid Grid.Row="0" x:Name="dtg_Cnkh" Loaded="dtg_Cnkh_Loaded" AutoGenerateColumns="False" CanUserAddRows="False" CanUserReorderColumns="False">
+                            <DataGrid x:Name="dtg_Cnkh" Loaded="dtg_Cnkh_Loaded" AutoGenerateColumns="False" CanUserAddRows="False" CanUserReorderColumns="False">
                                 <DataGrid.Columns>
                                     <DataGridTextColumn Binding="{Binding Hotenvo}" Width="auto" Header="Họ tên vợ"/>
                                     <DataGridTextColumn Binding="{Binding Ngaysinhvo}" Width="auto" Header="Ngày sinh vợ"/>
@@ -313,57 +202,34 @@
                                     <DataGridTextColumn Binding="{Binding Ngaydk}" Width="auto" Header="Ngày đăng kí"/>
                                 </DataGrid.Columns>
                             </DataGrid>
-                            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left">
-                                <Button Style="{StaticResource MaterialDesignFlatAccentButton}" Grid.Row="1" materialDesign:ButtonAssist.CornerRadius="7" materialDesign:RippleAssist.Feedback="Salmon"
-                                    Foreground="{DynamicResource PrimaryHueDarkBrush}" Width="100" Height="35" HorizontalAlignment="Right" Margin="0 10 20 0" FontSize="13">
-                                    <StackPanel Orientation="Horizontal">
-                                        <materialDesign:PackIcon Kind="Plus" VerticalAlignment="Center" Width="13" Height="13" Margin="0 1 8 0"/>
-                                        <TextBlock Text="Thêm"/>
-                                    </StackPanel>
-                                </Button>
-                                <Button Style="{StaticResource MaterialDesignFlatAccentButton}" Grid.Row="1" materialDesign:ButtonAssist.CornerRadius="7" materialDesign:RippleAssist.Feedback="Salmon"
-                                    Foreground="{DynamicResource PrimaryHueDarkBrush}" Width="100" Height="35" HorizontalAlignment="Right" Margin="0 10 20 0" FontSize="13">
-                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                        <materialDesign:PackIcon Kind="Delete" VerticalAlignment="Center" Margin="0 0 5 0"/>
-                                        <TextBlock Text="Xóa" VerticalAlignment="Center" FontSize="13" FontWeight="SemiBold"/>
-                                    </StackPanel>
-                                </Button>
-                                <Button Style="{StaticResource MaterialDesignFlatAccentButton}" Grid.Row="1" materialDesign:ButtonAssist.CornerRadius="7" materialDesign:RippleAssist.Feedback="Salmon"
-                                    Foreground="{DynamicResource PrimaryHueDarkBrush}" Width="100" Height="35" HorizontalAlignment="Right" Margin="0 10 20 0" FontSize="13">
-                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                        <materialDesign:PackIcon Kind="AutoFix" VerticalAlignment="Center" Margin="0 0 5 0"/>
-                                        <TextBlock Text="Sửa" VerticalAlignment="Center" FontSize="13" FontWeight="SemiBold"/>
-                                    </StackPanel>
-                                </Button>
-                            </StackPanel>
-                            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left">
-                                <Button Style="{StaticResource MaterialDesignFlatAccentButton}" Grid.Row="1" materialDesign:ButtonAssist.CornerRadius="7" materialDesign:RippleAssist.Feedback="Salmon"
-                                    Foreground="{DynamicResource PrimaryHueDarkBrush}" Width="100" Height="35" HorizontalAlignment="Right" Margin="0 10 20 0" FontSize="13">
-                                    <StackPanel Orientation="Horizontal">
-                                        <materialDesign:PackIcon Kind="Plus" VerticalAlignment="Center" Width="13" Height="13" Margin="0 1 8 0"/>
-                                        <TextBlock Text="Thêm"/>
-                                    </StackPanel>
-                                </Button>
-                                <Button Style="{StaticResource MaterialDesignFlatAccentButton}" Grid.Row="1" materialDesign:ButtonAssist.CornerRadius="7" materialDesign:RippleAssist.Feedback="Salmon"
-                                    Foreground="{DynamicResource PrimaryHueDarkBrush}" Width="100" Height="35" HorizontalAlignment="Right" Margin="0 10 20 0" FontSize="13">
-                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                        <materialDesign:PackIcon Kind="Delete" VerticalAlignment="Center" Margin="0 0 5 0"/>
-                                        <TextBlock Text="Xóa" VerticalAlignment="Center" FontSize="13" FontWeight="SemiBold"/>
-                                    </StackPanel>
-                                </Button>
-                                <Button Style="{StaticResource MaterialDesignFlatAccentButton}" Grid.Row="1" materialDesign:ButtonAssist.CornerRadius="7" materialDesign:RippleAssist.Feedback="Salmon"
-                                    Foreground="{DynamicResource PrimaryHueDarkBrush}" Width="100" Height="35" HorizontalAlignment="Right" Margin="0 10 20 0" FontSize="13">
-                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                        <materialDesign:PackIcon Kind="AutoFix" VerticalAlignment="Center" Margin="0 0 5 0"/>
-                                        <TextBlock Text="Sửa" VerticalAlignment="Center" FontSize="13" FontWeight="SemiBold"/>
-                                    </StackPanel>
-                                </Button>
-                            </StackPanel>
                         </Grid>
                     </TabItem>
 
                 </TabControl>
-                <Border Grid.Row="3" HorizontalAlignment="Right" BorderBrush="SlateGray" BorderThickness="1" 
+                <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Left">
+                    <Button x:Name="btn_Them_ThongTin" Style="{StaticResource MaterialDesignFlatAccentButton}" Grid.Row="1" materialDesign:ButtonAssist.CornerRadius="7" materialDesign:RippleAssist.Feedback="Salmon"
+                                    Foreground="{DynamicResource PrimaryHueDarkBrush}" Width="100" Height="35" HorizontalAlignment="Right" Margin="0 10 20 0" FontSize="13" Click="btn_Them_ThongTin_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Plus" VerticalAlignment="Center" Width="13" Height="13" Margin="0 1 8 0"/>
+                            <TextBlock Text="Thêm"/>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="btn_Xoa_ThongTin" Style="{StaticResource MaterialDesignFlatAccentButton}" Grid.Row="1" materialDesign:ButtonAssist.CornerRadius="7" materialDesign:RippleAssist.Feedback="Salmon"
+                                    Foreground="{DynamicResource PrimaryHueDarkBrush}" Width="100" Height="35" HorizontalAlignment="Right" Margin="0 10 0 0" FontSize="13" Click="btn_Xoa_ThongTin_Click">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <materialDesign:PackIcon Kind="Delete" VerticalAlignment="Center" Margin="0 0 5 0"/>
+                            <TextBlock Text="Xóa" VerticalAlignment="Center" FontSize="13" FontWeight="SemiBold"/>
+                        </StackPanel>
+                    </Button>
+                    <Button Style="{StaticResource MaterialDesignFlatAccentButton}" Grid.Row="1" materialDesign:ButtonAssist.CornerRadius="7" materialDesign:RippleAssist.Feedback="Salmon"
+                                    Foreground="{DynamicResource PrimaryHueDarkBrush}" Width="100" Height="35" HorizontalAlignment="Right" Margin="0 10 20 0" FontSize="13">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <materialDesign:PackIcon Kind="AutoFix" VerticalAlignment="Center" Margin="0 0 5 0"/>
+                            <TextBlock x:Name="btn_Sua_ThongTin" Text="Sửa" VerticalAlignment="Center" FontSize="13" FontWeight="SemiBold"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+                <Border Grid.Row="4" HorizontalAlignment="Right" BorderBrush="SlateGray" BorderThickness="1" 
                         CornerRadius="5" Padding="5" Background="white" Margin="0 10 10 10" Height="40">
                     <StackPanel Orientation="Horizontal">
                         <Button Style="{StaticResource MaterialDesignIconButton}" Background="Transparent" Foreground="SlateGray" FontSize="13" Margin="1 0"

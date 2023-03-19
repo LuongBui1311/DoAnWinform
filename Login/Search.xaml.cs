@@ -79,5 +79,74 @@ namespace Login
                 conn.Close();
             }
         }
+
+        private void dtg_Tamtru_Loaded(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                conn.Open();
+                string sqlStr = string.Format("SELECT *FROM Tamtru");
+
+                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
+                DataTable dtTamtru = new DataTable();
+                adapter.Fill(dtTamtru);
+
+                dtg_Tamtru.ItemsSource = dtTamtru.DefaultView;
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void dtg_Tamvang_Loaded(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                conn.Open();
+                string sqlStr = string.Format("SELECT *FROM Tamvang");
+
+                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
+                DataTable dtTamvang = new DataTable();
+                adapter.Fill(dtTamvang);
+
+                dtg_Tamvang.ItemsSource = dtTamvang.DefaultView;
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void dtg_Cnkh_Loaded(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                conn.Open();
+                string sqlStr = string.Format("SELECT *FROM Cnkh");
+
+                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
+                DataTable dtCnkh = new DataTable();
+                adapter.Fill(dtCnkh);
+
+                dtg_Cnkh.ItemsSource = dtCnkh.DefaultView;
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
     }
 }

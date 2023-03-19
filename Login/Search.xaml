@@ -134,8 +134,67 @@
                             </DataGrid>
                         </Grid>
                     </TabItem>
-                    <TabItem Header="Hộ khẩu" Width="auto" Height="45">
-                        
+                    <TabItem Header="Tạm trú" Width="auto" Height="45">
+                        <Grid>
+                            <DataGrid x:Name="dtg_Tamtru" Loaded="dtg_Tamtru_Loaded" ItemsSource="{Binding Tamtru}" AutoGenerateColumns="False" CanUserAddRows="False">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Binding="{Binding Ngaydk}" Width="auto" Header="Ngày đăng kí"/>
+                                    <DataGridTextColumn Binding="{Binding Noidk}" Width="auto" Header="Nơi đăng kí"/>
+                                    <DataGridTextColumn Binding="{Binding Hoten}" Width="auto" Header="Họ và Tên"/>
+                                    <DataGridTextColumn Binding="{Binding Ngaysinh}" Width="auto" Header="Ngày sinh"/>
+                                    <DataGridTextColumn Binding="{Binding Cmnd}" Width="auto" Header="CMND"/>
+                                    <DataGridTextColumn Binding="{Binding Nccmnd}" Width="auto" Header="Nơi cấp CMND"/>
+                                    <DataGridTextColumn Binding="{Binding Ngccmnd}" Width="auto" Header="Ngày cấp CMND"/>
+                                    <DataGridTextColumn Binding="{Binding Diachitht}" Width="auto" Header="Địa chỉ thường trú"/>
+                                    <DataGridTextColumn Binding="{Binding Diachitt}" Width="auto" Header="Địa chỉ tạm trú"/>
+                                    <DataGridTextColumn Binding="{Binding Ngayden}" Width="auto" Header="Ngày đến"/>
+                                    <DataGridTextColumn Binding="{Binding Ngaydi}" Width="auto" Header="Ngày đi"/>
+                                    <DataGridTextColumn Binding="{Binding Lydo}" Width="auto" Header="Lý do"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Header="Tạm vắng" Width="auto" Height="45">
+                        <Grid>
+                            <DataGrid x:Name="dtg_Tamvang" AutoGenerateColumns="False" CanUserAddRows="False" Loaded="dtg_Tamvang_Loaded">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Binding="{Binding Ncdi}" Width="auto" Header="Nơi chuyển đi"/>
+                                    <DataGridTextColumn Binding="{Binding Ncden}" Width="auto" Header="Nơi chuyển đến"/>
+                                    <DataGridTextColumn Binding="{Binding Hoten}" Width="auto" Header="Họ và Tên"/>
+                                    <DataGridTextColumn Binding="{Binding Ngaysinh}" Width="auto" Header="Ngày sinh"/>
+                                    <DataGridTextColumn Binding="{Binding Cmnd}" Width="auto" Header="CMND"/>
+                                    <DataGridTextColumn Binding="{Binding Nccmnd}" Width="auto" Header="Nơi cấp CMND"/>
+                                    <DataGridTextColumn Binding="{Binding Ngccmnd}" Width="auto" Header="Ngày cấp CMND"/>
+                                    <DataGridTextColumn Binding="{Binding Diachitht}" Width="auto" Header="Địa chỉ thường trú"/>
+                                    <DataGridTextColumn Binding="{Binding Diachitt}" Width="auto" Header="Địa chỉ tạm trú"/>
+                                    <DataGridTextColumn Binding="{Binding Ngaydi}" Width="auto" Header="Ngày đi"/>
+                                    <DataGridTextColumn Binding="{Binding Ngayve}" Width="auto" Header="Ngày về"/>
+                                    <DataGridTextColumn Binding="{Binding Lydo}" Width="auto" Header="Lý do"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Header="Giấy chứng nhận kết hôn" Width="auto" Height="45">
+                        <Grid>
+                            <DataGrid x:Name="dtg_Cnkh" Loaded="dtg_Cnkh_Loaded" AutoGenerateColumns="False" CanUserAddRows="False">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Binding="{Binding Hotenvo}" Width="auto" Header="Họ tên vợ"/>
+                                    <DataGridTextColumn Binding="{Binding Ngaysinhvo}" Width="auto" Header="Ngày sinh vợ"/>
+                                    <DataGridTextColumn Binding="{Binding Dantocvo}" Width="auto" Header="Dân tộc vợ"/>
+                                    <DataGridTextColumn Binding="{Binding Quoctichvo}" Width="auto" Header="Quốc tịch vợ"/>
+                                    <DataGridTextColumn Binding="{Binding Noicutruvo}" Width="auto" Header="Nơi cư trú vợ"/>
+                                    <DataGridTextColumn Binding="{Binding Giaytotuythanvo}" Width="auto" Header="Giấy tờ tùy thân vợ"/>
+                                    <DataGridTextColumn Binding="{Binding Hotenchong}" Width="auto" Header="Họ tên chồng"/>
+                                    <DataGridTextColumn Binding="{Binding Ngaysinhchong}" Width="auto" Header="Ngày sinh chồng"/>
+                                    <DataGridTextColumn Binding="{Binding Dantocchong}" Width="auto" Header="Dân tộc chồng"/>
+                                    <DataGridTextColumn Binding="{Binding Quoctichchong}" Width="auto" Header="Quốc tịch chồng"/>
+                                    <DataGridTextColumn Binding="{Binding Noicutruchong}" Width="auto" Header="Nơi cư trú chồng"/>
+                                    <DataGridTextColumn Binding="{Binding Giaytotuythanchong}" Width="auto" Header="Giấy tờ tùy thân chồng"/>
+                                    <DataGridTextColumn Binding="{Binding Noidk}" Width="auto" Header="Nơi đăng kí"/>
+                                    <DataGridTextColumn Binding="{Binding Ngaydk}" Width="auto" Header="Ngày đăng kí"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Grid>
                     </TabItem>
                 </TabControl>
                 <Border Grid.Row="3" HorizontalAlignment="Right" BorderBrush="SlateGray" BorderThickness="1" 

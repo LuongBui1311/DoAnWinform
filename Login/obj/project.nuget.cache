@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GYPbwA19ViHg94ho6RFZJHSzeTN3P7eq0kO5/W6LDdc3HFJOSo/F+h/U7ILhxKS+KCiqyiwXr4hhRsFwe1LCbg==",
+  "dgSpecHash": "8t/SIvDoyXd7/9L50awfLd20a0Z+veUN2M5ZAhCcaCVftyonjGQhvGV/6ZhjdkTYgUbzqwxigrojyIEHgc/myw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\HP\\Source\\Repos\\DoAnWinform\\Login\\Login.csproj",
+  "projectFilePath": "C:\\Users\\HP\\source\\repos\\DoAnWinform\\Login\\Login.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\materialdesigncolors\\2.1.2\\materialdesigncolors.2.1.2.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\materialdesignthemes\\4.8.0\\materialdesignthemes.4.8.0.nupkg.sha512",

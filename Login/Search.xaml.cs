@@ -148,5 +148,10 @@ namespace Login
                 conn.Close();
             }
         }
+
+        private void btn_Them_ThongTin_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }
